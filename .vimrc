@@ -23,6 +23,9 @@ Plugin 'hail2u/vim-css3-syntax'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'jonathanfilip/vim-lucius'
+" Plugin 'jaredpar/VsVim'
+Plugin 'ybian/smartim'
+Plugin 'mileszs/ack.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -77,3 +80,9 @@ cnoremap <C-n> <Down>
 
 colorscheme lucius 
 set t_Co=256
+
+" NERDTree ignore
+let NERDTreeIgnore=['\.vim$', '\~$', 'node_modules']
+
+" Webpack watch issue
+:set backupcopy=yes
