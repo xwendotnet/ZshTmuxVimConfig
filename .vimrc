@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-" filetype plugin on
+filetype plugin on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -12,12 +12,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
+" Plugin 'othree/yajs.vim'
+" Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim'
+Plugin 'othree/csscomplete.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 " Plugin 'Valloric/YouCompleteMe'
@@ -25,7 +25,17 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jonathanfilip/vim-lucius'
 " Plugin 'jaredpar/VsVim'
 Plugin 'ybian/smartim'
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
+Plugin 'https://github.com/rking/ag.vim'
+Plugin 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'pangloss/vim-javascript' , { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'digitaltoad/vim-jade'
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plugin 'https://github.com/gabesoft/vim-ags.git'
 
 
 " All of your Plugins must be added before the following line
@@ -65,12 +75,12 @@ set history=200
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set encoding=utf-8
 
-set tabstop=4
+set tabstop=2
 set expandtab
 
-set shiftwidth=4
+set shiftwidth=2
 
-set softtabstop=4
+set softtabstop=2
 set foldmethod=indent
 " set autoindent
 set fdl=2
@@ -85,4 +95,20 @@ set t_Co=256
 let NERDTreeIgnore=['\.vim$', '\~$', 'node_modules']
 
 " Webpack watch issue
-:set backupcopy=yes
+set backupcopy=yes
+
+let g:jsx_ext_required = 0
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+
+" " Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ag_prg='ag -S --nocolor --column --ignore node_modules' 
