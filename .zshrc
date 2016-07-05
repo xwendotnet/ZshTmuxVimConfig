@@ -98,3 +98,4 @@ function stop_tuproxy {
 }
 
 alias lesc='cd ~/Documents/ThoughtWorks/Lenovo/LESC/'
+alias github='cd ~/Documents/ThoughtWorks/GitHub/'

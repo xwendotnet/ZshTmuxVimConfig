@@ -90,6 +90,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 colorscheme lucius 
+LuciusDark
 set t_Co=256
 
 "NERDTree-Tabs{
