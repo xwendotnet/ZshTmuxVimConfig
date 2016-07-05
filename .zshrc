@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/gradle-2.4/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/gradle-2.12/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,3 +84,17 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias vi="vim"
+
+setopt AUTO_CD
+
+function start_tuproxy {
+  export http_proxy='cow.0.6180339.in:21642'
+  export https_proxy='cow.0.6180339.in:21642'
+}
+
+function stop_tuproxy {
+  export http_proxy=
+  export HTTPS_PROXY=
+}
+
+alias lesc='cd ~/Documents/ThoughtWorks/Lenovo/LESC/'

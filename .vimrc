@@ -27,8 +27,8 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'ybian/smartim'
 " Plugin 'mileszs/ack.vim'
 Plugin 'https://github.com/rking/ag.vim'
-Plugin 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'pangloss/vim-javascript' , { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 " Track the engine.
 Plugin 'SirVer/ultisnips'
