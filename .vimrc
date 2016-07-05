@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-filetype plugin on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -36,13 +35,13 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/gabesoft/vim-ags.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin indent on    
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -69,6 +68,8 @@ set number
 " set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
+"搜索时逐字符高亮
+set incsearch  
 
 set history=200
 
@@ -91,8 +92,17 @@ cnoremap <C-n> <Down>
 colorscheme lucius 
 set t_Co=256
 
+"NERDTree-Tabs{
+"设置打开vim的时候默认打开目录树
+"let g:nerdtree_tabs_open_on_console_startup=1       
+
+"设置打开目录树的快捷键
+map <F3> :NERDTreeToggle <CR>         
+
 " NERDTree ignore
 let NERDTreeIgnore=['\.vim$', '\~$', 'node_modules']
+
+"}
 
 " Webpack watch issue
 set backupcopy=yes
@@ -103,6 +113,8 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
 
 " " Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
