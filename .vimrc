@@ -30,13 +30,22 @@ Plugin 'pangloss/vim-javascript' , { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/gabesoft/vim-ags.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" TypeScript
+Plugin 'leafgarland/typescript-vim'
+" autopair
+Plugin 'jiangmiao/auto-pairs'
+" ng2
+Plugin 'mhartington/vim-angular2-snippets'
+" tern_for_vim
+Plugin 'ternjs/tern_for_vim'
+
 
 
 " All of your Plugins must be added before the following line
@@ -88,6 +97,11 @@ set fdl=2
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+"设置切换Buffer快捷键"
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+" shortcut for tab
+noremap <C-t> :tabnew<CR>
 
 colorscheme lucius 
 LuciusDark
@@ -122,6 +136,18 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
 let g:ag_prg='ag -S --nocolor --column --ignore node_modules' 
+
+" AirLine {
+"
+let g:airline_theme="solarized" 
+let g:airline_powerline_fonts = 1   
+" 打开tabline功能,方便查看Buffer和切换，这个功能比较不错"
+" 我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+"}
+"
+set clipboard^=unnamed

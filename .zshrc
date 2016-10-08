@@ -99,3 +99,6 @@ function stop_tuproxy {
 
 alias lesc='cd ~/Documents/ThoughtWorks/Lenovo/LESC/'
 alias github='cd ~/Documents/ThoughtWorks/GitHub/'
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
