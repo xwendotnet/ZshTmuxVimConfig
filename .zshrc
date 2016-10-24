@@ -87,16 +87,6 @@ alias vi="vim"
 
 setopt AUTO_CD
 
-function start_tuproxy {
-  export http_proxy='cow.0.6180339.in:21642'
-  export https_proxy='cow.0.6180339.in:21642'
-}
-
-function stop_tuproxy {
-  export http_proxy=
-  export HTTPS_PROXY=
-}
-
 alias lesc='cd ~/Documents/ThoughtWorks/Lenovo/LESC/'
 alias github='cd ~/Documents/ThoughtWorks/GitHub/'
 
