@@ -114,6 +114,9 @@ set t_Co=256
 "设置打开目录树的快捷键
 map <F3> :NERDTreeToggle <CR>         
 
+" disable ex mode
+map Q <Nop>
+
 " NERDTree ignore
 let NERDTreeIgnore=['\.vim$', '\~$', 'node_modules']
 
