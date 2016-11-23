@@ -17,7 +17,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim'
 Plugin 'othree/csscomplete.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'groenewege/vim-less'
+" Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'user/L9', {'name': 'newL9'}
@@ -27,24 +27,26 @@ Plugin 'ybian/smartim'
 " Plugin 'mileszs/ack.vim'
 Plugin 'https://github.com/rking/ag.vim'
 Plugin 'pangloss/vim-javascript' , { 'for': ['javascript', 'javascript.jsx'] }
-Plugin 'mxw/vim-jsx'
-Plugin 'digitaltoad/vim-jade'
+" Plugin 'mxw/vim-jsx'
+" Plugin 'digitaltoad/vim-jade'
 " Track the engine.
 " Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/gabesoft/vim-ags.git'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 " TypeScript
-Plugin 'leafgarland/typescript-vim'
+" Plugin 'leafgarland/typescript-vim'
 " autopair
 Plugin 'jiangmiao/auto-pairs'
 " ng2
-Plugin 'mhartington/vim-angular2-snippets'
+" Plugin 'mhartington/vim-angular2-snippets'
 " tern_for_vim
 Plugin 'ternjs/tern_for_vim'
+" Wechat app
+Plugin 'chemzqm/wxapp.vim'
 
 
 
@@ -154,3 +156,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "}
 "
 set clipboard^=unnamed
+
+" Disable preview when auto complete
+set completeopt-=preview

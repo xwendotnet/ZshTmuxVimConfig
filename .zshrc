@@ -53,7 +53,6 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/gradle-2.12/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,8 +86,5 @@ alias vi="vim"
 
 setopt AUTO_CD
 
-alias lesc='cd ~/Documents/ThoughtWorks/Lenovo/LESC/'
-alias github='cd ~/Documents/ThoughtWorks/GitHub/'
-
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+. "$NVM_DIR/nvm.sh"
