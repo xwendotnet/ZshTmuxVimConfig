@@ -35,8 +35,8 @@ Plugin 'pangloss/vim-javascript' , { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'honza/vim-snippets'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/gabesoft/vim-ags.git'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " TypeScript
 " Plugin 'leafgarland/typescript-vim'
 " autopair
@@ -46,8 +46,10 @@ Plugin 'jiangmiao/auto-pairs'
 " tern_for_vim
 Plugin 'ternjs/tern_for_vim'
 " Wechat app
-Plugin 'chemzqm/wxapp.vim'
-
+" Plugin 'chemzqm/wxapp.vim'
+" Ruby
+Bundle 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 
 
 " All of your Plugins must be added before the following line
@@ -115,6 +117,7 @@ set t_Co=256
 
 "设置打开目录树的快捷键
 map <F3> :NERDTreeToggle <CR>         
+map <F2> @:
 
 " disable ex mode
 map Q <Nop>
@@ -147,7 +150,7 @@ let g:ag_prg='ag -S --nocolor --column --ignore node_modules'
 
 " AirLine {
 "
-let g:airline_theme="solarized" 
+let g:airline_theme="cool" 
 let g:airline_powerline_fonts = 1   
 " 打开tabline功能,方便查看Buffer和切换，这个功能比较不错"
 " 我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer"
