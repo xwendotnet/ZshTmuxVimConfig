@@ -38,7 +38,7 @@ Plugin 'https://github.com/gabesoft/vim-ags.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " TypeScript
-" Plugin 'leafgarland/typescript-vim'
+Plugin 'leafgarland/typescript-vim'
 " autopair
 Plugin 'jiangmiao/auto-pairs'
 " ng2

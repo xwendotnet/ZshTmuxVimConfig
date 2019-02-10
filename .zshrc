@@ -56,6 +56,7 @@ plugins=(git)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -79,8 +80,26 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias vi="vim"
+alias odin="ssh -fNL 2009:127.0.0.1:2009 zengbo.aka.corp.amazon.com"
+alias bb="brazil-build"
+alias sam="brazil-build-tool-exec sam"
+# alias rm="rmtrash"
 
 setopt AUTO_CD
 
+export PATH="/apollo/env/SDETools/bin:$PATH"
+export PATH="/Users/zengbo/bin/:$PATH"
+export PATH=$PATH:/usr/local/bin  # MIDWAY PATH: Path changed for ssh
+
+PATH="/Users/zengbo/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/zengbo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/zengbo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/zengbo/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/zengbo/perl5"; export PERL_MM_OPT;
+
+export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS:$HOME/.toolbox/bin
+
 export NVM_DIR="$HOME/.nvm"
-. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
