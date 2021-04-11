@@ -103,3 +103,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PATH=$HOME/bin:$HOME/.toolbox/bin:$PATH
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH=$PATH:$HOME/workplace/.odin-tools/env/OdinRetrievalScript-1.0/runtime/bin
+
+eval $(thefuck --alias)
+
+unsetopt correct_all
+
+
+export AAA_PROXY_HOST=zengbo.aka.corp.amazon.com
+export PATH="/usr/local/opt/node@12/bin:$PATH"
